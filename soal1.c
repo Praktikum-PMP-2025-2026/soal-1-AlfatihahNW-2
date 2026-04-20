@@ -12,7 +12,6 @@
 #include <stdlib.h>
 #include <math.h>
 int main(){
-    printf("Masukkan: "); 
     int N;
     
     FILE* fsensor;
@@ -35,7 +34,6 @@ int main(){
     fsensor = fopen("filesensor.txt", "r");
 
     fscanf(fsensor, "%d", &N);
-    printf("N: %d\n", N);
    
     int arr[N];
     int number;
@@ -47,7 +45,6 @@ int main(){
 
         
         arr[i]=number;
-        printf("%d", arr[i]);
     }
 
 //--------------------------------------------------------------------------
