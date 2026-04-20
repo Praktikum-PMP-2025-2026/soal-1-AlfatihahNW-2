@@ -60,6 +60,7 @@ int main(){
             int kiriada=0;
             int kananada=0;
 
+
             for (int j=i-1; j>=0; j--) {
                 if (arr[j]!=-1) {
                     kiri=arr[j];
@@ -68,6 +69,7 @@ int main(){
                 }
             }
 
+   
             for (int j=i+1; j<N; j++) {
                 if (arr[j]!=-1) {
                     kanan=arr[j];
@@ -76,13 +78,14 @@ int main(){
                 }
             }
 
+    \
             if (kiriada && kananada) {
                 hasil[i]=(kiri+kanan)/2; 
             } 
-            else if (kananada) {
+            else if (kiriada) {
                 hasil[i]=kiri;
             } 
-            else if (kiriada) {
+            else if (kananada) {
                 hasil[i]=kanan;
             } 
             else {
@@ -117,3 +120,4 @@ int main(){
     
     
 }
+
