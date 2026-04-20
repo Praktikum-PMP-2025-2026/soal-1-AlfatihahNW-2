@@ -26,8 +26,9 @@ int main(){
 
 
 
-    fputs(data, fsensor);
-    fputs("\n", fsensor);}
+ 
+        fputs(data, fsensor);
+        fputs("\n", fsensor);
 
     fclose(fsensor);
 
