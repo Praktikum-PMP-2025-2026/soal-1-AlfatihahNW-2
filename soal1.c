@@ -24,19 +24,10 @@ int main(){
 
     fsensor = fopen("filesensor.txt", "w");
 
-    if (fsensor == NULL){
-        printf("File tidak ada");
-    }
-    else {
-        printf("File berhasil dibuat\n");
-    }
 
-    if (fsensor == NULL) 
-        printf("The file is not opened.");
-    else{
-        printf("The file is now opened.\n");
-        fputs(data, fsensor);
-        fputs("\n", fsensor);}
+
+    fputs(data, fsensor);
+    fputs("\n", fsensor);}
 
     fclose(fsensor);
 
