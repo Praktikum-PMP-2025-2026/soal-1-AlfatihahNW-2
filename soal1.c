@@ -57,35 +57,32 @@ int main(){
         else {
             int kiri=-1;
             int kanan=-1;
-            int masukkiri=0;
-            int masukkanan=0;
+            int kiriada=0;
+            int kananada=0;
 
-            //cara tetangga dari kiri
             for (int j=i-1; j>=0; j--) {
                 if (arr[j]!=-1) {
                     kiri=arr[j];
-                    masukkiri=1;
+                    kiriada=1;
                     break;
                 }
             }
 
-            //cari tetangga valid terdekat di kanan
             for (int j=i+1; j<N; j++) {
                 if (arr[j]!=-1) {
                     kanan=arr[j];
-                    masukkanan=1;
+                    kananada=1;
                     break;
                 }
             }
 
-            //logika penggantian -1 dan lain lainnya 
-            if (masukkiri && masukkanan) {
-                hasil[i]=(kiri+kanan)/2; //mediannya
+            if (kiriada && kananada) {
+                hasil[i]=(kiri+kanan)/2; 
             } 
-            else if (masukkiri) {
+            else if (kananada) {
                 hasil[i]=kiri;
             } 
-            else if (masukkanan) {
+            else if (kiriada) {
                 hasil[i]=kanan;
             } 
             else {
@@ -100,22 +97,22 @@ int main(){
     }
 
     if (N>0) {
-        int sumMax = hasil[0];
-        int sumBaru = hasil[0];
+        int max = hasil[0];
+        int new = hasil[0];
 
         for (int i=1; i<N; i++) {
 
-            if (hasil[i]>sumBaru+hasil[i]) {
-                sumBaru=hasil[i];
+            if (hasil[i]>new+hasil[i]) {
+                new=hasil[i];
             } else {
-                sumBaru=sumBaru+hasil[i];
+                new=new+hasil[i];
             }
 
-            if (sumBaru>sumMax) {
-                sumMax=sumBaru;
+            if (new>max) {
+                max=new;
             }
         }
-        printf("\nMAX_SUM %d ", sumMax);
+        printf("\nMAX_SUM %d ", max);
     }
     
     
